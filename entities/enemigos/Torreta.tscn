@@ -5,13 +5,18 @@
 [ext_resource path="res://entities/enemigos/Projectile.tscn" type="PackedScene" id=3]
 
 [node name="Torreta" type="Sprite"]
+position = Vector2( 32, 8 )
 texture = ExtResource( 2 )
 script = ExtResource( 1 )
 projectile_scene = ExtResource( 3 )
 
 [node name="FirePosition" type="Position2D" parent="."]
-position = Vector2( 8, 27 )
+position = Vector2( 2, 27 )
+__meta__ = {
+"_gizmo_extents_": 14.8
+}
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 1.52
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
